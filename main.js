@@ -3,31 +3,36 @@ const desktopMenu = document.querySelector(".desktop-menu");
 const menuHamIcon = document.querySelector(".menu");
 const movilMenu = document.querySelector(".movil-menu");
 const menuCarritoIcon = document.querySelector(".navbar-shopping-cards");
-const ordenCarrito = document.querySelector(".product-detail");
+const productDetailCloseIcon = document.querySelector(".product-datail-close");
+const shoppingCartContainer = document.querySelector("#shoppingCartContainer");
 const cardsContainer = document.querySelector(".cards-container");
+const producDetailContainer = document.querySelector("#productDetail");
 
 menuEmail.addEventListener("click", toggleDesktopMenu);
 menuHamIcon.addEventListener("click", toggleMovilMenu);
 menuCarritoIcon.addEventListener("click", toggleCarritoMenu);
+productDetailCloseIcon.addEventListener("click", closeProdcutDetailAside);
 
 function toggleDesktopMenu() {
-    const isCarritoMenuClosed = ordenCarrito.classList.contains("inactive");
+    const isCarritoMenuClosed = shoppingCartContainer.classList.contains("inactive");
 
     if (!isCarritoMenuClosed) {
-        ordenCarrito.classList.add("inactive");
+        shoppingCartContainer.classList.add("inactive");
       }
 
-  desktopMenu.classList.toggle("inactive");
+      desktopMenu.classList.toggle("inactive");
 }
 
 function toggleMovilMenu() {
-    const isCarritoMenuClosed = !ordenCarrito.classList.contains("inactive");
+    const isCarritoMenuClosed = !shoppingCartContainer.classList.contains("inactive");
 
     if (isCarritoMenuClosed) {
-        ordenCarrito.classList.add("inactive");
+        shoppingCartContainer.classList.add("inactive");
       }
 
   movilMenu.classList.toggle("inactive");
+
+  closeProdcutDetailAside();
 }
 
 function toggleCarritoMenu() {
@@ -41,7 +46,28 @@ function toggleCarritoMenu() {
     desktopMenu.classList.add("inactive");
   }
 
-  ordenCarrito.classList.toggle("inactive");
+  const isProductDetailClosed = !producDetailContainer.classList.contains("inactive");
+
+  if (isProductDetailClosed) {
+    producDetailContainer.classList.add("inactive");
+  }
+
+
+  shoppingCartContainer.classList.toggle("inactive");
+}
+
+function openProducDetailAside(){
+    const isCarritoMenuClosed = !shoppingCartContainer.classList.contains("inactive");
+
+    if (isCarritoMenuClosed) {
+        shoppingCartContainer.classList.add("inactive");
+      }
+
+    producDetailContainer.classList.remove("inactive");
+}
+
+function closeProdcutDetailAside() {
+    producDetailContainer.classList.add("inactive");
 }
 
 const productList = [];
@@ -58,7 +84,7 @@ productList.push({
 });
 
 productList.push({
-    name: 'Lamborguini',
+    name: 'BMW',
     precio: 120,
     Image: './carros/lambor.jpg',
 });
@@ -88,6 +114,7 @@ function renderProducts(arr){
     
         const productImage = document.createElement('img');
         productImage.setAttribute('src', product.Image);
+        productImage.addEventListener("click", openProducDetailAside);
     
         const productInfo = document.createElement('div');
         productInfo.classList.add('product-info');

@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inicio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;500;700&display=swap" rel="stylesheet">
+    <style>
+        :root{
+            --very-light-pink: #c7c7c7;
+            --text-input-field: #f7f7f7;
+            --hospital-green: #acd9b2;
+            --white: #ffffff;
+            --black: #000000;
+            --sm: 14px;
+            --md: 16px;
+            --lg: 18px;
+        }
+        body{
+            font-family: 'Quicksand', sans-serif;
+        }
+        .cards-container{
+            display: grid;
+            grid-template-columns: repeat(auto-fill, 240px);
+            gap: 26px;
+            place-content: center;
+        }
+        .product-cards{
+            width: 240px;
+        }
+        .product-cards img{
+            width: 240px;
+            height: 240px;
+            border-radius: 20px;
+        }
+        .product-info{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-top: 12px;
+        }
+        .product-info figure{
+            margin: 0%;
+        }
+        .product-info div p:nth-child(1){
+            font-weight: bold;
+            font-size: var(--md);
+            margin-top: 0;
+            margin-bottom: 4px;
+        }
+        .product-info div p:nth-child(2){
+            font-size: var(--sm);
+            margin-top: 0;
+            margin-bottom: 0;
+            color: var(--very-light-pink);
+        }
+        .product-info figure img{
+            width: 35px;
+            height: 35px;
+        }
+        @media (max-width:640px) {
+            .cards-container{
+                display: grid;
+                grid-template-columns: repeat(auto-fill, 140px);
+            }
+            .product-cards{
+            width: 140px;
+        }
+        .product-cards img{
+            width: 140px;
+            height: 140px;
+            
+        }
+            
+        }
+
+
+    </style>
+</head>
+<body>
+    <section class="main-container">
+        <div class="cards-container">
+            <div class="product-cards">
+                <img src="/carros/ferre.jpg" alt="product" class="product-img">
+                <div class="product-info">
+                    <div>
+                        <p>$120,00</p>
+                        <p>Ferrari</p>
+                    </div>
+                    <figure>
+                        <img src="/icons/bt_add_to_cart.svg" alt="Agregar">
+                    </figure>
+                </div>
+            </div>
+
+            <div class="product-cards">
+                <img src="/carros/bmw.jpg" alt="product" class="product-img">
+                <div class="product-info">
+                    <div>
+                        <p>$100,00</p>
+                        <p>BMW</p>
+                    </div>
+                    <figure>
+                        <img src="/icons/bt_add_to_cart.svg" alt="Agregar">
+                    </figure>
+                </div>
+            </div>
+
+            <div class="product-cards">
+                <img src="/carros/ferrari.jpg" alt="product" class="product-img">
+                <div class="product-info">
+                    <div>
+                        <p>$300,00</p>
+                        <p>Ferrari</p>
+                    </div>
+                    <figure>
+                        <img src="/icons/bt_add_to_cart.svg" alt="Agregar">
+                    </figure>
+                </div>
+            </div>
+
+            <div class="product-cards">
+                <img src="/carros/toyota.jpg" alt="product" class="product-img">
+                <div class="product-info">
+                    <div>
+                        <p>$160,00</p>
+                        <p>Toyota</p>
+                    </div>
+                    <figure>
+                        <img src="/icons/bt_add_to_cart.svg" alt="Agregar">
+                    </figure>
+                </div>
+            </div>
+
+            <div class="product-cards">
+                <img src="/carros/jeep.jpg" alt="product" class="product-img">
+                <div class="product-info">
+                    <div>
+                        <p>$130,00</p>
+                        <p>Jeep</p>
+                    </div>
+                    <figure>
+                        <img src="/icons/bt_add_to_cart.svg" alt="Agregar">
+                    </figure>
+                </div>
+            </div>
+
+            <div class="product-cards">
+                <img src="/carros/porshe.jpg" alt="product" class="product-img">
+                <div class="product-info">
+                    <div>
+                        <p>$220,00</p>
+                        <p>Porshe</p>
+                    </div>
+                    <figure>
+                        <img src="/icons/bt_add_to_cart.svg" alt="Agregar">
+                    </figure>
+                </div>
+            </div>
+
+            <div class="product-cards">
+                <img src="/carros/lambor.jpg" alt="product" class="product-img">
+                <div class="product-info">
+                    <div>
+                        <p>$320,00</p>
+                        <p>Lamborguini</p>
+                    </div>
+                    <figure>
+                        <img src="/icons/bt_add_to_cart.svg" alt="Agregar">
+                    </figure>
+                </div>
+            </div>
+
+            <div class="product-cards">
+                <img src="/carros/audi.jpg" alt="product" class="product-img">
+                <div class="product-info">
+                    <div>
+                        <p>$120,00</p>
+                        <p>Audi</p>
+                    </div>
+                    <figure>
+                        <img src="/icons/bt_add_to_cart.svg" alt="Agregar">
+                    </figure>
+                </div>
+            </div>
+
+            <div class="product-cards">
+                <img src="/carros/audi2.jpg" alt="product" class="product-img">
+                <div class="product-info">
+                    <div>
+                        <p>$120,00</p>
+                        <p>Audi</p>
+                    </div>
+                    <figure>
+                        <img src="/icons/bt_add_to_cart.svg" alt="Agregar">
+                    </figure>
+                </div>
+            </div>
+
+            <div class="product-cards">
+                <img src="/carros/reanult.jpg" alt="product" class="product-img">
+                <div class="product-info">
+                    <div>
+                        <p>$120,00</p>
+                        <p>Renault</p>
+                    </div>
+                    <figure>
+                        <img src="/icons/bt_add_to_cart.svg" alt="Agregar">
+                    </figure>
+                </div>
+            </div>
+        </div>
+    </section>
+</body>
+</html>
